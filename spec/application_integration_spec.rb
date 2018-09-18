@@ -3,8 +3,11 @@ require 'spec_helper'
 describe "GET '/' - Greeting Form" do
   # Code from previous example
   it 'welcomes the user' do
-    visit '/'
-    expect(page.body).to include("Welcome!")
+    visit '/' #visit is Capybara method; navigates test's browser to specific URL ; 
+              #accepts string argument
+    expect(page.body).to include("Welcome!") #page is Capybara method; exposes session/browser being used; 
+                                             #responds to click_link, fill_in, and body
+                                             #page.body gets all HTML in a string format
   end
 
   # New test
